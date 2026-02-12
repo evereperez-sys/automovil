@@ -29,8 +29,7 @@ Este enfoque está inspirado en el **Patrón  de Diseño creacional Builder**.
     - La lógica de qué piezas necesita un automovil está en el Builder
 
 
-3. **Inmutabilidad:**
-   - Los campos son private y no se definen getters, con esto se asegura que durante el proceso de fabricacion no se puedan cambiar los datos del pedido del cliente. Datos como el color, motor etc.
+
 
 ---
 
