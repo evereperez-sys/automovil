@@ -25,7 +25,7 @@ Este enfoque está inspirado en el **Patrón  de Diseño creacional Builder**.
 
 1. **Facilita el mantenimiento**  
    - Se puede agregar o eliminar opciones para el automovil sin modificar otros componentes.
-2. **La logica de Cosntruccion**
+2. **La logica de Construccion**
     - La lógica de qué piezas necesita un automovil está en el Builder
 
 
