@@ -6,7 +6,7 @@ Esta aplicación es un sistema de **personalizacion de un automovil** desarrolla
 
 Se evita que se tengan multiples constructores o un constructor con muchos parametros segun la personalizacion del cliente.
 
-Este enfoque está inspirado en el **Patrón de Diseño Builder**.
+Este enfoque está inspirado en el **Patrón  de Diseño creacional Builder**.
 
 ---
 
@@ -15,33 +15,26 @@ Este enfoque está inspirado en el **Patrón de Diseño Builder**.
    
   Personalizacion: Permite que los clientes puedan escojer las diferentes opciones disponibles a su preferencia
 
-  Nuevas opciones: Permiete a la empresa añadir rapidamente mas opciones para sus clientes.
+  Nuevas opciones: Permiete a la empresa añadir o quitar rapidamente las opciones para sus clientes.
 
 
 ---
 
-##  Solución Implementada
-
-Se introduce una **Sala de Chat (`MediatorChatGrupal`)** como mediador central que:
-
-- Recibe mensajes de los usuarios.
-- Distribuye los mensajes a los destinatarios correspondientes.
-- Gestiona el registro y eliminación de usuarios.
-
-Los usuarios solo se comunican con la sala de chat, **no entre sí directamente**.
-
----
 
 ##  Beneficios de esta arquitectura
 
 1. **Facilita el mantenimiento**  
    - Se puede agregar o eliminar opciones para el automovil sin modificar otros componentes.
 
-2. **Mejor organización del código**  
-   - Toda la lógica de comunicación está centralizada en el mediador (`MediatorChatGrupal`).
-
-3. **Reduce la complejidad del sistema**  
+2. **Reduce la complejidad del sistema**  
    - Evita relaciones punto a punto entre usuarios.
+  
+3. **La logica de Cosntruccion**
+    - La lógica de qué piezas necesita un automovil está en el Builder
+
+
+4. **Inmutabilidad:**
+   - Los campos son private y no se definen con esto se asegura que durante el proceso de fabricacion no se puedan cambiar los datos del pedido del cliente
 
 ---
 
@@ -59,10 +52,8 @@ npm start
 
 El sistema sigue el **Patrón Builder**, donde:
 
-- `Usuario` → es el colega concreto.
-- `Emisor` → es la clase base de los participantes.
-- `IMediador` → define el contrato del mediador.
-- `MediadorChatGrupal` → coordina la comunicación.
+- `Automovil` → es el automovil.
+- `AutomovilBuilder` → es la logica de partes del automovil a pedido
 
 ```mermaid
 classDiagram
