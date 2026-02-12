@@ -50,7 +50,7 @@ Los usuarios solo se comunican con la sala de chat, **no entre sí directamente*
 ```bash
 npm  install
 npm  run build
-yarn start
+npm start
 
 ```
 ---
