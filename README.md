@@ -91,5 +91,4 @@ classDiagram
 
     IAutomovil <|.. AutomovilBuilder : implements
     AutomovilBuilder o-- Automovil : builds
-    IAutomovil <|.. AutomovilBuilder : implements
-    AutomovilBuilder o-- Automovil : builds
+ 
