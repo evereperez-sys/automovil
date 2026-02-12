@@ -25,16 +25,12 @@ Este enfoque está inspirado en el **Patrón  de Diseño creacional Builder**.
 
 1. **Facilita el mantenimiento**  
    - Se puede agregar o eliminar opciones para el automovil sin modificar otros componentes.
-
-2. **Reduce la complejidad del sistema**  
-   - Evita relaciones punto a punto entre usuarios.
-  
-3. **La logica de Cosntruccion**
+2. **La logica de Cosntruccion**
     - La lógica de qué piezas necesita un automovil está en el Builder
 
 
-4. **Inmutabilidad:**
-   - Los campos son private y no se definen con esto se asegura que durante el proceso de fabricacion no se puedan cambiar los datos del pedido del cliente
+3. **Inmutabilidad:**
+   - Los campos son private y no se definen getters, con esto se asegura que durante el proceso de fabricacion no se puedan cambiar los datos del pedido del cliente. Datos como el color, motor etc.
 
 ---
 
@@ -52,8 +48,8 @@ npm start
 
 El sistema sigue el **Patrón Builder**, donde:
 
-- `Automovil` → es el automovil.
-- `AutomovilBuilder` → es la logica de partes del automovil a pedido
+- `Automovil` → es el automovil pedido.
+- `AutomovilBuilder` → es la logica de partes del automovil.
 
 ```mermaid
 classDiagram
@@ -68,7 +64,7 @@ classDiagram
         +mostrarEspecificaciones() void
     }
 
-    class IAutomovilBuilder {
+    class IAutomovil {
         <<interface>>
         +setMotor(tipo: string) this
         +setColor(color: string) this
